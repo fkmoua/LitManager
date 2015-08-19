@@ -1,0 +1,52 @@
+<%= render "shared/navbar" %>
+<%= render "shared/sidenavbar" %>
+
+<body>
+<div class="container-fluid">
+	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+	
+	<div class="row">
+        <div class="col-md-8 show-table">
+        	<%= @filing.debtor %> <%= @filing.name%><br>
+        	<%= @filing.joint_debtor%> <%= @filing.name%> <br>
+        	<%= @filing.address %> <br>
+        	<%= @filing.city %>, <%= @filing.state %><br>
+        	<%= @filing.zipcode %>
+        </div>
+        <div class="col-md-4 show-table">
+        	<%= @filing.case_no%><br>
+        	<%= @filing.court %> <br>
+        	<%= @filing.date_filed %> <br>
+        	Honorable <%=@filing.judge%> <br><br>
+    	</div>
+	</div>
+
+	<br>
+
+	<div class="row">
+		<div class="col-md-1 show-table">
+			<center>Date</center>
+		</div>
+		<div class="col-md-5 show-table">
+			<center>Event</center>
+		</div>
+		<div class="col-md-6 show-table">
+			<center>Notes</center>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-1 show-table">
+			06/11/2015
+		</div>
+		<div class="col-md-5 show-table">
+			Case received from client.
+		</div>
+		<div class="col-md-6 show-table">
+			Confirmation sent by e-mail on 6/12/15.
+		</div>
+	</div>
+</div>
+
+</body>
+

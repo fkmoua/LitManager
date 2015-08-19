@@ -1,0 +1,42 @@
+<br>
+
+<%= render "shared/navbar" %>
+<%= render "shared/sidenavbar" %>
+
+<body>
+<div class="container-fluid">
+	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+	<div class="table-responsive">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th> Case Name </th>
+				<th> Debtor </th>
+				<th> Joint Debtor </th>
+				<th> Case No. </th>
+				<th> Court Filed </th>
+				<th> Judge </th>
+			</tr>
+		</thead>
+
+		<tbody>
+		<% @filings.each do |filing| %>
+			<tr>
+				<td><%= link_to(filing.name, filing_path(filing)) %> <br></td>
+				<td><%= filing.debtor %> <br></td>
+				<td><%= filing.joint_debtor %> <br></td>
+				<td><%= filing.case_no %> <br></td>
+				<td></td>
+				<td><%= filing.judge %> <br></td>
+			</tr>
+
+		<% end %>
+		</tbody>
+
+	</table>
+		</div>
+	</div>
+</div>
+
+</body>
+
